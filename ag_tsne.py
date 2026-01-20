@@ -26,7 +26,7 @@ def TSNE_TE(adjacency_matrix,distance_matrix,perplexity):
     
     return ordered_nodes
 
-def possible_orders(adjacency_matrix,n,k):
+def possible_orders(adjacency_matrix,n,k): #Funcion usada para encontrar ordenes iniciales para luego usarse en el algoritmo genetico
     orders=[]
     t_m=len(adjacency_matrix)
     ds=[t_m/2,t_m]
@@ -41,7 +41,7 @@ def possible_orders(adjacency_matrix,n,k):
         #print(i)
     return orders
 
-#Función de mutación (intercambio e inserción)
+#Función de mutación (intercambio e inserción) Funcion de creacion propia usada en el algoritmo genetico
 def mutSwapAndInsert(individual, indpb_swap=0.5, indpb_insert=0.5):
     """Aplica una mutación por intercambio o por inserción, asegurando que el individuo se mantenga válido."""
     size = len(individual)
